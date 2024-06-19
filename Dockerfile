@@ -64,4 +64,4 @@ WORKDIR /app
 COPY --from=builder /app/target/release/srt-whep ./srt-whep
 
 ENV GST_DEBUG=1
-ENTRYPOINT [ "./srt-whep" ]
+ENTRYPOINT ./srt-whep -i $SRT_SOURCE_IP:$SRT_SOURCE_PORT -o 0.0.0.0:8888 -p $PORT -s caller
