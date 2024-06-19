@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM lukemathwalker/cargo-chef:latest-rust-1.76-bookworm AS chef
+FROM lukemathwalker/cargo-chef:latest-rust-1.79.0-bookworm as chef
 WORKDIR /app
 RUN apt update && apt install lld clang -y
 
